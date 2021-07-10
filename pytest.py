@@ -17,11 +17,12 @@ class HelloWorldTest(unittest.TestCase):
     op = webdriver.ChromeOptions()
     op.add_argument('headless')
 
-    self.driver = webdriver.Chrome("C:\\Users\\Michelle\\Downloads\\chromedriver_win32\\chromedriver.exe", options=op)
+    self.driver = webdriver.Chrome("chromedriver", options=op)
 
   def test(self):
     # Get homepage
-    self.driver.get("https://HelloWorld.mzietlow.repl.co")
+    #self.driver.get("https://HelloWorld.mzietlow.repl.co")
+    self.driver.get("http://134.122.25.47:5000")
 
     # Find textbox and enter integer to test
     textbox = self.driver.find_element_by_name("number")
